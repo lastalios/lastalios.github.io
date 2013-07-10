@@ -1,3 +1,7 @@
+title: lastalios
+author: lastalios
+author.email: lastalios@gmail.com
+url: https://lastalios.github.io/
 permalink: /blog/:title
 pygments: true
 markdown: rdiscount
