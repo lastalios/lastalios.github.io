@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="author" content="Artur Ostrega" />
+  <meta name="author" content="{{ site.author }}" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   {% if page.title %}
-  <title>{{ page.title }} &bull; ostrega_artur.write</title>
+  <title>{{ page.title }} &bull; {{ site.title }}</title>
   {% else %}
-  <title>ostrega_artur.write</title>
+  <title>{{ site.title }}</title>
   {% endif %}
   <link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono|Droid+Serif:400,400italic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/css/reset.css" />
@@ -16,7 +16,7 @@
 </head>
 <body>
   <header>
-    <h1 id="title"><a href="/">ostrega_artur.write</a></h1>
+    <h1 id="title"><a href="/">{{ site.title }}</a></h1>
   </header>
 
   <div id="content">
@@ -25,16 +25,16 @@
 
   <footer>
     <ul>
-      <li><a href="http://feeds.feedburner.com/ArturOstrega">Feed</a></li>
-      <li><a href="mailto:amo@lavabit.com">Email</a></li>
-      <li><a href="https://github.com/skofo">GitHub</a></li>
-      <li><a href="https://twitter.com/skoofoo">Twitter</a></li>
+      <li><a href="{{ site.url }}/feed.xml/">Feed</a></li>
+      <li><a href="mailto:{{ site.author.email }}">Email</a></li>
+      <li><a href="https://github.com/{{ site.github }}">GitHub</a></li>
+      <li><a href="https://twitter.com/{{ site.twitter}}">Twitter</a></li>
     </ul>
   </footer>
   <script type="text/javascript">
     // Google Analytics
     var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-35561502-3']);
+    _gaq.push(['_setAccount', '{{ site.gaid }}']);
     _gaq.push(['_trackPageview']);
 
     (function() {
